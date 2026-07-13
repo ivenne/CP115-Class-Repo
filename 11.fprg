@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="11"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-07-13 09:32:51 AM"/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNy0xMzswOToxOTo1MiBBTTsyNzQ3"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLUozOVAxTlQ7MjAyNi0wNy0xMzswOTozMjo1MSBBTTsxOzI4NDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tempRoom" type="Integer" array="False" size=""/>
+            <input variable="tempRoom"/>
+            <declare name="tempTarget" type="Integer" array="False" size=""/>
+            <input variable="tempTarget"/>
+            <declare name="power" type="Integer" array="False" size=""/>
+            <if expression="tempTarget &lt; tempRoom">
+                <then>
+                    <assign variable="power" expression="8 * (tempRoom - tempTarget)"/>
+                </then>
+                <else>
+                    <assign variable="power" expression="10 * ( tempTarget - tempRoom)"/>
+                </else>
+            </if>
+            <if expression="power &lt;= 100">
+                <then/>
+                <else>
+                    <assign variable="power" expression="100"/>
+                </else>
+            </if>
+            <output expression="power" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

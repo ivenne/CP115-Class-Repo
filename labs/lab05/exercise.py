@@ -7,3 +7,9 @@
 # On Windows you may need:         py exercise.py
 #
 # Nothing in this file is marked, so experiment as much as you like.
+
+# Import entire modules
+
+age = input("Enter your age: ")
+print(age)
+print(type(age))
